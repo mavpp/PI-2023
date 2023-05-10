@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-//  -- função auxiliar do cálculo da length de uma string (strlen);
+//  -- função auxiliar do cálculo da length de uma string (strlen).
 int lengthString (char s1[]) {
     int len = 0;
     int i = 0;
@@ -11,6 +11,12 @@ int lengthString (char s1[]) {
         i++;
     }
     return len;
+}
+
+//  -- função que imprime uma string.
+void dumpV (char s1[]){
+    int i = 0;
+    for (i; i < lengthString(s1); i++) printf("%c", s1[i]);
 }
 
 // 7.
@@ -66,19 +72,4 @@ char *mystrrev (char s[]) {
         len--;
     }
     return s;
-}
-
-
-// Print the function.
-void dumpV (char s1[]){
-    int i = 0;
-    for (i; i < lengthString(s1); i++) printf("%c", s1[i]);
-}
-
-int main() {
-    char s1[30] = "programação imperativa";
-    char s2[30] = "programação imperativas";
-    dumpV(mystrrev(s1));
-
-    return 0;
 }
